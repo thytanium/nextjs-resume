@@ -1,209 +1,166 @@
 import Head from 'next/head'
+import ExperienceItem from '../components/Resume/ExperienceItem'
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Alejandro González - Full Stack Developer</title>
       </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="border-t-4 border-blue-700">
+        <div className="bg-gray-200 px-4 pt-4 pb-20">
+          <div className="flex justify-between">
+            <div className="w-1/3 p-4 flex flex-col space-y-4">
+              <ExperienceItem title="About Me">
+                <div className="flex justify-center p-4">
+                  <img src="/images/me.jpg" alt="Me" className="w-64 h-64 rounded-full" />
+                </div>
+                <p className="my-2">Being an enthusiast of computers as a kid, I started hacking websites together when I was a teenager.</p>
+                <p className="my-2">I have a Bachelor's Degree in Computer Science, and I have worked professionally in web-related projects <strong>for the past 9 years</strong>.</p>
+                <p className="my-2">I started as a Full Stack mostly focused on PHP back-ends using the framework CodeIgniter before I dived myself into <strong>Laravel</strong>.</p>
+                <p className="my-2">Before I knew it, I was involed in great part of the process: <strong>crafting UIs with React, containerizing apps with Docker, managing infrastructe in AWS</strong>.</p>
+                <p className="my-2">In recent years, I've been filling front-end positions for the first time in my life. Now, I'm learning everyday about <strong>NodeJS</strong>, <strong>Vue</strong> and <strong>JAMstack</strong>.</p>
+              </ExperienceItem>
+            </div>
+            <div className="w-1/3 p-4 flex flex-col space-y-8">
+              <ExperienceItem
+                title="Lokavant"
+                link="https://www.lokavant.com"
+                type="project"
+                companyName="Lokavant"
+                date="2020"
+                tags={[
+                  { name: 'react', color: 'purple' },
+                  { name: 'typescript', color: 'blue' },
+                ]}
+              >
+                <p className="my-2">A real-time monitoring app for clinical research organizations.</p>
+                <p className="my-2">First experience with Typescript.</p>
+              </ExperienceItem>
+              <ExperienceItem
+                title="Dendri"
+                link="http://www.dendri.com"
+                type="project"
+                companyName="Materialize Labs"
+                date="2019"
+                tags={[
+                  { name: 'react', color: 'purple' },
+                  { name: 'php', color: 'blue' },
+                  { name: 'laravel', color: 'red' },
+                  { name: 'mysql', color: 'indigo' },
+                  { name: 'graphql', color: 'pink' },
+                  { name: 'elasticsearch', color: 'green' },
+                  { name: 'bootstrap', color: 'blue' },
+                  { name: 'kubernetes', color: 'indigo' },
+                ]}
+              >
+                <p className="my-2">A project management software for law firms.</p>
+                <p className="my-2">I designed and developed a SaaS application from scratch.</p>
+                <p className="my-2">I used Terraform IaC for provisioning IaaS resources and automated CI/CD with GitLab.</p>
+              </ExperienceItem>
+              <ExperienceItem
+                title="Task Sheriff"
+                link="https://www.tasksheriff.com"
+                type="project"
+                companyName="Task Sheriff"
+                date="2016-2018"
+                // img="/images/tasksheriff.png"
+                tags={[
+                  { name: 'react', color: 'purple' },
+                  { name: 'php', color: 'blue' },
+                  { name: 'nodejs', color: 'teal' },
+                  { name: 'laravel', color: 'red' },
+                  { name: 'mysql', color: 'indigo' },
+                  { name: 'elasticsearch', color: 'green' },
+                  { name: 'aws', color: 'yellow' },
+                  { name: 'tailwind', color: 'teal' },
+                ]}
+              >
+                <p className="my-2">An AI-oriented fintech.</p>
+                <p className="my-2">I designed and developed a whole ecosystem from scratch.</p>
+                <p className="my-2">We first focused on a monolithic solution, but then moved to an API and separate apps approach.</p>
+                <p className="my-2">One of my most versatile experiences. Work here ranged from a UI table to show records, to communicate with OCR and AI services to process images, to design and maintain a whole CI/CD chain.</p>
+              </ExperienceItem>
+              <ExperienceItem
+                title="Socrates"
+                type="project"
+                companyName="Wintech"
+                date="2011-2013"
+                // img="/images/socrates-wide.png"
+                tags={[
+                  { name: 'php', color: 'blue' },
+                  { name: 'codeigniter', color: 'red' },
+                  { name: 'postgresql', color: 'indigo' },
+                  { name: 'jquery', color: 'orange' },
+                ]}
+              >
+                <p className="my-2">An academic management system.</p>
+                <p className="my-2">I was responsible for the development of the Enrollment module, where students were allowed to enroll for the new semester and select their subjects.</p>
+                <p className="my-2">First project I was involved that had a high user concurrency, where I learned to tune a web server.</p>
+                <p className="my-2">I developed an algorithm to efficiently assign class schedules to students based on dynamic input of classrooms, teachers availability and periods.</p>
+              </ExperienceItem>
+            </div>
+            <div className="w-1/3 p-4 flex flex-col space-y-8">
+              <ExperienceItem
+                title="HDSC"
+                type="project"
+                companyName="IQVIA"
+                date="2020"
+                tags={[
+                  { name: 'react', color: 'purple' },
+                  { name: 'nodejs', color: 'teal' },
+                ]}
+              >
+                <p className="my-2">A dashboard app for data science projects related to health industry.</p>
+                <p className="my-2">I developed new features and refactored some modules to improve the project's maintainability, and I was later entrusted back-end tasks with NodeJS.</p>
+                <p className="my-2">I developed a NodeJS script to migrate live data from Oracle database to new MySQL implementation.</p>
+              </ExperienceItem>
+              <ExperienceItem
+                title="Claro Video"
+                link="https://www.clarovideo.com"
+                type="project"
+                companyName="América Móvil"
+                date="2018-2019"
+                tags={[
+                  { name: 'php', color: 'blue' },
+                  { name: 'slim', color: 'red' },
+                  { name: 'phalcon', color: 'red' },
+                  { name: 'nodejs', color: 'teal' },
+                  { name: 'python', color: 'blue' },
+                  { name: 'oracle', color: 'indigo' },
+                  { name: 'mongodb', color: 'teal' },
+                  { name: 'cassandra', color: 'blue' },
+                ]}
+              >
+                <p className="my-2">#1 video-on-demand platform from Latin America.</p>
+                <p className="my-2">I started fixing bugs and doing maintenance, to later develop new features.</p>
+                <p className="my-2">One of the most exciting things I got to develop was the "Watch Next Episode" feature for better user experience.</p>
+                <p className="my-2">100% back-end development project.</p>
+              </ExperienceItem>
+              <ExperienceItem
+                title="Parley.com.ve"
+                link="https://www.parley.com.ve"
+                type="project"
+                companyName="PCV Sin Límites"
+                date="2013-2016"
+                // img="/images/parley.png"
+                tags={[
+                  { name: 'php', color: 'blue' },
+                  { name: 'laravel', color: 'red' },
+                  { name: 'mysql', color: 'indigo' },
+                  { name: 'jquery', color: 'orange' },
+                  { name: 'bootstrap', color: 'blue' },
+                ]}
+              >
+                <p className="my-2">A betting software.</p>
+                <p className="my-2">I was responsible for the development of the new product website from scratch with custom CMS.</p>
+                <p className="my-2">I configured and made optimizations for high-traffic website with on-premise servers.</p>
+                <p className="my-2">I led a project to develop a new major version of all management systems using better design patterns and coding practices, while focused on better UX.</p>
+              </ExperienceItem>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+      </div>
+    </>
   )
 }
