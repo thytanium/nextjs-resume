@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import ExperienceItem from '../components/Resume/ExperienceItem'
+import Bit from '../components/Resume/Bit'
 
 export default function Home() {
   return (
@@ -9,13 +10,22 @@ export default function Home() {
       </Head>
       <div className="border-t-4 border-indigo-700">
         <div className="bg-gray-200 px-4 pt-4 pb-20">
-          <div className="flex justify-between">
-            <div className="w-1/3 p-4 flex flex-col space-y-4">
+          <div className="flex flex-col xl:flex-row xl:justify-between">
+            <div className="xl:w-1/3 p-4 flex flex-col space-y-4">
               <ExperienceItem title="About Me">
-                <div className="flex flex-col items-center justify-center p-4">
-                  <img src="/images/me.jpg" alt="Me" className="w-64 h-64 rounded-full" />
-                  <a href="mailto:thytanium@gmail.com" className="mt-2 text-indigo-500">thytanium@gmail.com</a>
-                  <a href="https://twitter.com/aleaugustog" target="_blank" className="text-indigo-500">@aleaugustog</a>
+                <div className="flex items-center justify-around p-4">
+                  <img src="/images/me.jpg" alt="Me" className="w-32 h-32 rounded-full" />
+                  <div className="flex flex-col justify-between">
+                    <Bit label="email">
+                      <a href="mailto:thytanium@gmail.com" className="text-indigo-700">thytanium@gmail.com</a>
+                    </Bit>
+                    <Bit label="linkedin">
+                      <a href="https://linkedin.com/in/thytanium" target="_blank" className="text-indigo-700">Link</a>
+                    </Bit>
+                    <Bit label="twitter">
+                      <a href="https://twitter.com/aleaugustog" target="_blank" className="text-indigo-700">@aleaugustog</a>
+                    </Bit>
+                  </div>
                 </div>
                 <p className="my-2">Being an enthusiast of computers as a kid, I started hacking websites together when I was a teenager.</p>
                 <p className="my-2">I have a Bachelor's Degree in Computer Science, and I have worked professionally in web-related projects <strong>for the past 9 years</strong>.</p>
@@ -24,7 +34,7 @@ export default function Home() {
                 <p className="my-2">In recent years, I've been filling front-end positions for the first time in my life. Now, I'm learning everyday about <strong>NodeJS</strong>, <strong>Vue</strong> and <strong>JAMstack</strong>.</p>
               </ExperienceItem>
             </div>
-            <div className="w-1/3 p-4 flex flex-col space-y-8">
+            <div className="xl:w-1/3 p-4 flex flex-col space-y-8">
               <ExperienceItem
                 title="Lokavant"
                 link="https://www.lokavant.com"
@@ -104,7 +114,7 @@ export default function Home() {
                 <p className="my-2">I developed an algorithm to efficiently assign class schedules to students based on dynamic input of classrooms, teachers availability and periods.</p>
               </ExperienceItem>
             </div>
-            <div className="w-1/3 p-4 flex flex-col space-y-8">
+            <div className="xl:w-1/3 p-4 flex flex-col space-y-8">
               <ExperienceItem
                 title="HDSC"
                 type="project"
