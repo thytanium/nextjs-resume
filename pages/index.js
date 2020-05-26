@@ -27,6 +27,11 @@ export default function Home() {
                     </Bit>
                   </div>
                 </div>
+                <p className="my-2 text-indigo-700">Why Tailwind UI</p>
+                <p className="my-2">I think of myself as a Swiss Army knife of a developer because I'm passionate about the whole lifecyle of software, and that has driven me to learn technologies that apply to different layers of the stack, and it has created a good value for me that I can unconditionally offer to others.</p>
+                <p className="my-2">I work in projects that inspire and challenge me. I'm certain that Tailwind UI and I share the same tech values, like compulsively caring for the little details.</p>
+                <p className="my-2"></p>
+                <p className="mt-8 mb-2 text-indigo-700">Story Time</p>
                 <p className="my-2">Being an enthusiast of computers as a kid, I started hacking websites together when I was a teenager.</p>
                 <p className="my-2">I have a Bachelor's Degree in Computer Science, and I have worked professionally in web-related projects <strong>for the past 9 years</strong>.</p>
                 <p className="my-2">I started as a Full Stack mostly focused on PHP back-ends using the framework CodeIgniter before I dived myself into <strong>Laravel</strong>.</p>
