@@ -12,24 +12,21 @@ export default function ExperienceItem({
   link,
 }) {
   return (
-    <div className="shadow bg-white rounded">
+    <div className={`bg-white shadow-md rounded ${type === 'project' ? 'border-t-2 border-indigo-500' : ''}`}>
       <div className={classnames(
         'px-4 py-2 flex justify-between items-center rounded-t',
         {
-          'bg-blue-700': !type,
-          'bg-gray-700': type === 'project',
+          'bg-indigo-700': !type,
+          'bg-white': type === 'project',
         },
       )}>
         {link && (
           <a href={link} target="_blank">
-            <span className="uppercase font-bold text-white">{title}</span>
+            <span className="uppercase font-bold text-gray-700 hover:text-indigo-700">{title}</span>
           </a>
         )}
         {!link && (
-          <span className="uppercase font-bold text-white">{title}</span>
-        )}
-        {type === 'project' && (
-          <span className="px-1 uppercase font-bold bg-gray-200 text-gray-700 text-xs rounded">Project</span>
+          <span className={`uppercase font-bold ${type === 'project' ? 'text-gray-700' : 'text-white'}`}>{title}</span>
         )}
       </div>
       {img && (
@@ -38,7 +35,7 @@ export default function ExperienceItem({
         }} />
       )}
       {(companyName || date) && (
-        <div className="px-4 py-2 flex justify-between">
+        <div className="px-4 pb-1 flex justify-between border-b border-gray-200">
           <span className="text-xs text-gray-600 uppercase">{companyName}</span>
           <span className="text-xs text-gray-600 uppercase">{date}</span>
         </div>

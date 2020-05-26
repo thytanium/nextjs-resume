@@ -7,13 +7,15 @@ export default function Home() {
       <Head>
         <title>Alejandro González - Full Stack Developer</title>
       </Head>
-      <div className="border-t-4 border-blue-700">
+      <div className="border-t-4 border-indigo-700">
         <div className="bg-gray-200 px-4 pt-4 pb-20">
           <div className="flex justify-between">
             <div className="w-1/3 p-4 flex flex-col space-y-4">
               <ExperienceItem title="About Me">
-                <div className="flex justify-center p-4">
+                <div className="flex flex-col items-center justify-center p-4">
                   <img src="/images/me.jpg" alt="Me" className="w-64 h-64 rounded-full" />
+                  <a href="mailto:thytanium@gmail.com" className="mt-2 text-indigo-500">thytanium@gmail.com</a>
+                  <a href="https://twitter.com/aleaugustog" target="_blank" className="text-indigo-500">@aleaugustog</a>
                 </div>
                 <p className="my-2">Being an enthusiast of computers as a kid, I started hacking websites together when I was a teenager.</p>
                 <p className="my-2">I have a Bachelor's Degree in Computer Science, and I have worked professionally in web-related projects <strong>for the past 9 years</strong>.</p>
@@ -56,8 +58,9 @@ export default function Home() {
                 ]}
               >
                 <p className="my-2">A project management software for law firms.</p>
-                <p className="my-2">I designed and developed a SaaS application from scratch.</p>
+                <p className="my-2">I designed and developed a SaaS application from scratch, with common PM functionalities like Kanban boards, tasks assignment, etc.</p>
                 <p className="my-2">I used Terraform IaC for provisioning IaaS resources and automated CI/CD with GitLab.</p>
+                <p className="my-2 text-gray-600">PD: I have no association with the current landing page.</p>
               </ExperienceItem>
               <ExperienceItem
                 title="Task Sheriff"
