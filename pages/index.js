@@ -32,6 +32,7 @@ export default function Home() {
                 tags={[
                   { name: 'react', color: 'purple' },
                   { name: 'typescript', color: 'blue' },
+                  { name: 'tailwind', color: 'teal' },
                 ]}
               >
                 <p className="my-2">A real-time monitoring app for clinical research organizations.</p>
