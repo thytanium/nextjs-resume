@@ -45,7 +45,7 @@ export default function Home() {
                 link="https://www.lokavant.com"
                 type="project"
                 companyName="Lokavant"
-                date="2020"
+                date="2020-Present"
                 tags={[
                   { name: 'react', color: 'purple' },
                   { name: 'typescript', color: 'blue' },
@@ -60,7 +60,7 @@ export default function Home() {
                 link="http://www.dendri.com"
                 type="project"
                 companyName="Materialize Labs"
-                date="2019"
+                date="2019-Present"
                 tags={[
                   { name: 'react', color: 'purple' },
                   { name: 'php', color: 'blue' },
@@ -82,7 +82,7 @@ export default function Home() {
                 link="https://www.tasksheriff.com"
                 type="project"
                 companyName="Task Sheriff"
-                date="2016-2018"
+                date="2016-Present"
                 // img="/images/tasksheriff.png"
                 tags={[
                   { name: 'react', color: 'purple' },
